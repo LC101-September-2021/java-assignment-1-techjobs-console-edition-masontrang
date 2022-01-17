@@ -1,3 +1,5 @@
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -119,7 +121,17 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-
-        System.out.println("printJobs is not implemented yet");
+        if (someJobs.size() == 0 ){
+            System.out.println("No jobs found. Please try again.");
+        }
+        for (int i = 0; i<someJobs.size(); i++){
+            System.out.println("*****");
+//            System.out.println("test: " + someJobs.get(i));
+            System.out.println("position type: " + someJobs.get(i).get("position type"));
+            System.out.println("name: " + someJobs.get(i).get("name"));
+            System.out.println("employer: " + someJobs.get(i).get("employer"));
+            System.out.println("location: " + someJobs.get(i).get("location"));
+            System.out.println("core competency: " + someJobs.get(i).get("core competency"));
+        }
     }
 }
